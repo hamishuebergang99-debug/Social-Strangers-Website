@@ -105,20 +105,22 @@ header {
     }
 
     nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      list-style: none;
+      display: flex; /* Arranges list items in a flexible box layout */
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
     }
 
-    nav a {
-      color: var(--text-main);
+    nav li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
     }
 
-    nav a:hover {
+    nav li a:hover {
       color: var(--accent);
     }
 
@@ -291,5 +293,6 @@ header {
       color: var(--accent);
       text-decoration: none;
     }
+
 
 
