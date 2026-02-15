@@ -98,7 +98,7 @@ header {
 
     nav {
       background: var(--bg-light);
-      padding: 0px;
+      padding: 15px;
       position: sticky;
       inset-block-start: 0;
       z-index: 10;
@@ -291,6 +291,7 @@ header {
       color: var(--accent);
       text-decoration: none;
     }
+
 
 
 
