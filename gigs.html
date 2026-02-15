@@ -89,44 +89,52 @@
     <script>
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
-  const clickSound = document.getElementById('click-sound');
 
-  function playClick() {
-    clickSound.currentTime = 0; // allows rapid re-click
-    clickSound.play();
-  }
+  // Create a single audio element
+  const clickSound = new Audio();
+  clickSound.volume = 0.3; // adjust volume
 
-  // Hamburger click
+  // Hamburger click (optional: unique sound)
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-    playClick();
-  });
 
-  // All nav links click
-  document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function(e) {
-
-    const url = this.href;
-    if (this.target === "_blank" || url.startsWith('#')) return;
-
-    e.preventDefault();
-
+    // Example: optional hamburger sound
+    clickSound.src = "sounds/hamburger.mp3";
     clickSound.currentTime = 0;
     clickSound.play();
-
-    document.body.classList.add('fade-out');
-
-    setTimeout(() => {
-      window.location.href = url;
-    }, 300);
   });
-});
+
+  // Nav links
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+
+      const url = this.href;
+      if (this.target === "_blank" || url.startsWith('#')) return;
+
+      e.preventDefault();
+
+      // Play unique sound
+      const soundFile = this.dataset.sound;
+      if (soundFile) {
+        clickSound.src = soundFile;
+        clickSound.currentTime = 0;
+        clickSound.play();
+      }
+
+      // Delay navigation to let sound play
+      setTimeout(() => {
+        window.location.href = url;
+      }, 200); // adjust to match your sound length
+    });
+  });
 </script>
+
 
   </body>
 
   </html>
+
 
 
 
