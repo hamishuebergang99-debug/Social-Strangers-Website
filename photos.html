@@ -108,16 +108,30 @@
   });
 
   // All nav links click
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      playClick();
-    });
+  document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(e) {
+
+    const url = this.href;
+    if (this.target === "_blank" || url.startsWith('#')) return;
+
+    e.preventDefault();
+
+    clickSound.currentTime = 0;
+    clickSound.play();
+
+    document.body.classList.add('fade-out');
+
+    setTimeout(() => {
+      window.location.href = url;
+    }, 300);
   });
+});
 </script>
 
   </body>
 
   </html>
+
 
 
 
