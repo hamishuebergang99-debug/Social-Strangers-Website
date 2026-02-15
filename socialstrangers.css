@@ -112,91 +112,6 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* ================= NAVBAR ================= */
-
-.navbar {
-  background: var(--bg-light);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: var(--text-main);
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-  color: var(--accent);
-}
-
-/* ================= HAMBURGER ================= */
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--text-main);
-  transition: all 0.3s ease;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--bg-light);
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 0;
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-}
-
-
 /* ================= SECTIONS ================= */
 
 section {
@@ -335,6 +250,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
