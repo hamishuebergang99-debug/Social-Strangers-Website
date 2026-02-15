@@ -98,29 +98,27 @@ header {
 
     nav {
       background: var(--bg-light);
-      padding: 15px;
+      padding: 0px;
       position: sticky;
       inset-block-start: 0;
       z-index: 10;
     }
 
     nav ul {
-      display: flex; /* Arranges list items in a flexible box layout */
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
     }
 
-    nav li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
+    nav a {
+      color: var(--text-main);
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
     }
 
-    nav li a:hover {
+    nav a:hover {
       color: var(--accent);
     }
 
@@ -293,6 +291,7 @@ header {
       color: var(--accent);
       text-decoration: none;
     }
+
 
 
 
