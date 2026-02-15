@@ -60,16 +60,32 @@
     <script>
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
+  const clickSound = document.getElementById('click-sound');
 
+  function playClick() {
+    clickSound.currentTime = 0; // allows rapid re-click
+    clickSound.play();
+  }
+
+  // Hamburger click
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    playClick();
+  });
+
+  // All nav links click
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      playClick();
+    });
   });
 </script>
 
   </body>
 
   </html>
+
 
 
 
