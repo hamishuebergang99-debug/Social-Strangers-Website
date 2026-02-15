@@ -69,8 +69,24 @@
     <a href="https://www.facebook.com/profile.php?id=100086485277439" target="_blank" rel="noopener">Facebook</a>
   </footer>
 
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  navOverlay.addEventListener('click', toggleMenu);
+</script>
+
 </body>
 </html>
+
 
 
 
