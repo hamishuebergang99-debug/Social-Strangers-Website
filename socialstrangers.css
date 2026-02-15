@@ -20,6 +20,11 @@ body {
   background: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.6;
+  transition: opacity 0.3s ease;
+}
+
+body.fade-out {
+  opacity: 0;
 }
 
 /* Make all images responsive */
@@ -366,6 +371,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
