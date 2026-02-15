@@ -127,15 +127,20 @@ nav a:hover {
   margin: auto;
   padding: 1.2rem 1.5rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;   /* stack items vertically */
+  align-items: center;      /* center everything */
+  position: relative;
 }
+
 
 .nav-logo {
   font-weight: 700;
   letter-spacing: 3px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
+
 
 /* ================= HAMBURGER ================= */
 
@@ -175,6 +180,7 @@ nav a:hover {
   list-style: none;
   display: flex;
   gap: 2.5rem;
+  justify-content: center;  /* center links */
 }
 
 .nav-menu a {
@@ -226,8 +232,11 @@ nav a:hover {
 
   .hamburger {
     display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
   }
-
+  
   .nav-menu {
     position: fixed;
     top: 0;
@@ -387,6 +396,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
