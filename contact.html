@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Social Strangers | Official Website</title>
   <body>
-  <audio id="click-sound" preload="auto">
-  <source src="Beat.mp3" type="audio/mp3">
-  </audio>
 
 <!-- CONTACT -->
   <section id="contact">
@@ -72,50 +69,48 @@
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
 
-  // Create a single audio element
-  const clickSound = new Audio();
-  clickSound.volume = 0.3; // adjust volume
+  // Hamburger sound (optional)
+  const hamburgerSound = new Audio('sounds/Beat.mp3');
+  hamburgerSound.volume = 0.3;
 
-  // Hamburger click (optional: unique sound)
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-
-    // Example: optional hamburger sound
-    clickSound.src = "sounds/Beat.mp3";
-    clickSound.currentTime = 0;
-    clickSound.play();
+    hamburgerSound.currentTime = 0;
+    hamburgerSound.play().catch(err => console.log(err));
   });
 
-  // Nav links
+  // Preload audio for each nav link
   document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', function(e) {
+    const soundFile = link.dataset.sound;
+    if (!soundFile) return;
 
+    // Create audio element for this link
+    const audio = new Audio(soundFile);
+    audio.volume = 0.3;
+
+    link.addEventListener('click', function(e) {
       const url = this.href;
       if (this.target === "_blank" || url.startsWith('#')) return;
 
       e.preventDefault();
 
-      // Play unique sound
-      const soundFile = this.dataset.sound;
-      if (soundFile) {
-        clickSound.src = soundFile;
-        clickSound.currentTime = 0;
-        clickSound.play();
-      }
+      // Play the sound
+      audio.currentTime = 0;
+      audio.play().catch(err => console.log(err));
 
-      // Delay navigation to let sound play
+      // Delay navigation so sound can play
       setTimeout(() => {
         window.location.href = url;
-      }, 200); // adjust to match your sound length
+      }, 200); // adjust to match sound length
     });
   });
 </script>
 
-
   </body>
 
   </html>
+
 
 
 
