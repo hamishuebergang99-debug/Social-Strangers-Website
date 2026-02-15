@@ -112,6 +112,143 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* ================= PREMIUM NAV ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2px;
+  background: var(--text-main);
+  transition: 0.4s ease;
+}
+
+/* Animate into X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= DESKTOP MENU ================= */
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-main);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Premium underline glow */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* ================= MOBILE PREMIUM SIDE PANEL ================= */
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 900;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 280px;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: 0.5s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+}
+
+
 /* ================= SECTIONS ================= */
 
 section {
@@ -250,6 +387,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
