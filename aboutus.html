@@ -57,21 +57,17 @@
     <script>
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
-  const navOverlay = document.getElementById('nav-overlay');
 
-  function toggleMenu() {
+  hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-    navOverlay.classList.toggle('active');
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-  navOverlay.addEventListener('click', toggleMenu);
+  });
 </script>
 
   </body>
 
   </html>
+
 
 
 
