@@ -183,6 +183,19 @@ h3 {
   letter-spacing: 2px;
 }
 
+.video-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 2rem;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
 /* ================= GALLERIES ================= */
 
 .gallery,
@@ -237,6 +250,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
