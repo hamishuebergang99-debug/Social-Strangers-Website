@@ -16,6 +16,11 @@
     }
 
     body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       background: var(--bg-dark);
       color: var(--text-main);
       line-height: 1.6;
@@ -286,4 +291,5 @@ header {
       color: var(--accent);
       text-decoration: none;
     }
+
 
