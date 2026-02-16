@@ -305,13 +305,13 @@ h3 {
 }
 
 .video-wrapper {
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 2rem;
+  width: 80%;
+  max-width: 800px;
+  margin-top: 5rem;
 }
 
 .video-wrapper iframe {
-  width: 100%;
+  width: 80%;
   aspect-ratio: 16 / 9;
   border: none;
   display: block;
@@ -371,6 +371,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
