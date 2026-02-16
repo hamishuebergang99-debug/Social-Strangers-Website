@@ -309,13 +309,20 @@ h3 {
   width: 80%;
   max-width: 800px;
   margin-top: 5rem;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 ratio */
+  height: 0;
 }
 
 .video-wrapper iframe {
-  width: 80%;
   aspect-ratio: 16 / 9;
   border: none;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* ================= GALLERIES ================= */
@@ -372,6 +379,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
