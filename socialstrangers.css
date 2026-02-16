@@ -60,7 +60,7 @@ header {
 }
 
 .header-image {
-  margin-top: 1.5rem;
+  margin-top: 0.2rem;
   width: clamp(250px, 70vw, 800px);
   opacity: 0.85;
 }
@@ -371,6 +371,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
