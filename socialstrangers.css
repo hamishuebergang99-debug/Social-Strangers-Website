@@ -149,6 +149,7 @@ nav a:hover {
 /* ================= HAMBURGER ================= */
 
 .hamburger {
+  margin-left: auto;
   position: absolute;
   right: 1.5rem;
   display: flex;
@@ -379,6 +380,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
