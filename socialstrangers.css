@@ -57,6 +57,7 @@ header {
 
 .header-logo {
   width: clamp(200px, 60vw, 420px);
+  margin-top: -20px;
 }
 
 .header-image {
@@ -371,6 +372,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
