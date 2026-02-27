@@ -82,7 +82,7 @@ header {
   color: var(--text-muted);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .about-us {
     writing-mode: vertical-lr;
     text-orientation: upright;
@@ -380,6 +380,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
