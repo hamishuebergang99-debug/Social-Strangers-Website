@@ -37,8 +37,7 @@ img {
 /* ================= HEADER ================= */
 
 header {
-  min-height: 100svh; /* better mobile viewport handling */
-  min-height: 100vh;  /* fallback */
+  min-height: clamp(500px, 80vh, 900px);
 
   background-image:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
@@ -394,6 +393,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
