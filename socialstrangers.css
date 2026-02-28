@@ -46,7 +46,7 @@ header {
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg");
 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -97,10 +97,12 @@ header {
   color: var(--text-muted);
 }
 
-@media (min-width: 768px) {
-  .about-us {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+/* Mobile-specific crop */
+@media (max-width: 768px) {
+  header {
+    background-image:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url("Images/hero-mobile.jpeg");
   }
 }
 
@@ -395,6 +397,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
