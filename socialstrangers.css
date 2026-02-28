@@ -37,6 +37,9 @@ img {
 /* ================= HEADER ================= */
 
 header {
+  min-height: 100svh; /* better mobile viewport handling */
+  min-height: 100vh;  /* fallback */
+  
   background-image:
     linear-gradient(
       to bottom,
@@ -54,8 +57,6 @@ header {
 /* Mobile hero */
 @media (max-width: 768px) {
   header {
-    min-height: 100svh; /* modern mobile-safe viewport */
-    
     background-image:
     linear-gradient(
       to bottom,
@@ -395,6 +396,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
