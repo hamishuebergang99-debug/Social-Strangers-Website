@@ -82,6 +82,12 @@ header {
   text-transform: uppercase;
 }
 
+@media (max-width: 600px) {
+  header {
+    background-position: center top;
+  }
+}
+
 /* Vertical text only on larger screens */
 .about-us {
   margin-top: 1.5rem;
@@ -388,6 +394,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
