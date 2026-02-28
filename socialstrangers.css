@@ -83,12 +83,6 @@ header {
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  header {
-    background-position: center top;
-  }
-}
-
 /* Vertical text only on larger screens */
 .about-us {
   margin-top: 1.5rem;
@@ -102,7 +96,7 @@ header {
   header {
     background-image:
       linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-      url("Images/hero-mobile.jpeg");
+      url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e-mobile.jpeg");
   }
 }
 
@@ -397,6 +391,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
