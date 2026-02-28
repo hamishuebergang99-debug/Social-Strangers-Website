@@ -46,7 +46,7 @@ header {
       rgba(0,0,0,0.18) 0%,
       rgba(0,0,0,0.35) 100%
     ),
-    url("Images/your-image.jpeg");
+    url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg");
 
   background-size: cover;
   background-position: center;
@@ -396,6 +396,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
