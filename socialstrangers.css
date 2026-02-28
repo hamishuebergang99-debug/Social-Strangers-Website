@@ -37,15 +37,23 @@ img {
 /* ================= HEADER ================= */
 
 header {
-  min-height: 90vh;
-  background:
+  min-height: 100svh; /* better mobile viewport handling */
+  min-height: 100vh;  /* fallback */
+
+  background-image:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg") center / cover no-repeat;
+    url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* prevents mobile bugs */
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: clamp(2rem, 5vw, 4rem);
 }
 
 .header-content {
@@ -380,6 +388,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
