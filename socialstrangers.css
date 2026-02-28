@@ -39,14 +39,16 @@ img {
 header {
   min-height: clamp(500px, 80vh, 900px);
 
+  min-height: 100svh;
+  min-height: 100vh;
+
   background-image:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg");
 
-  background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll; /* prevents mobile bugs */
+  background-position: center;
 
   display: flex;
   align-items: center;
@@ -81,7 +83,7 @@ header {
   text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header {
     background-position: center top;
   }
@@ -393,6 +395,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
