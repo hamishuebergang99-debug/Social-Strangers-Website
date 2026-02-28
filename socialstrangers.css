@@ -39,20 +39,21 @@ img {
 header {
   min-height: 100svh;
   min-height: 100vh;
-
+  
   background-image:
     linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.25) 0%,
-    rgba(0,0,0,0.55) 100%
-  ),
-    url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg");
+      to bottom,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.55) 100%
+    ),
+    url("Images/your-image.jpeg");
 
-  background-position: center;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-}
 
+  filter: contrast(1.08) saturate(1.12);
+}
 /* Mobile hero */
 @media (max-width: 768px) {
   header {
@@ -62,9 +63,11 @@ header {
     rgba(0,0,0,0.25) 0%,
     rgba(0,0,0,0.55) 100%
   ),
-      url("Images/d8641ccb-a1f6-436b-88da-1e6d52d4e68f-mobile.jfif");
+    url("Images/d8641ccb-a1f6-436b-88da-1e6d52d4e68f-mobile.jfif");
 
     background-position: center top;
+
+    filter: contrast(1.08) saturate(1.12);
   }
 }
 
@@ -393,6 +396,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
