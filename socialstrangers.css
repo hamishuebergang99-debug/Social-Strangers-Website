@@ -44,7 +44,7 @@ header {
     url("Images/53fdad36-e253-4d3d-9711-36bb00ad223e.jpeg");
 
   background-position: center top;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: scroll; /* prevents mobile bugs */
 
@@ -393,6 +393,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
