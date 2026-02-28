@@ -37,9 +37,6 @@ img {
 /* ================= HEADER ================= */
 
 header {
-  min-height: 100svh;
-  min-height: 100vh;
-  
   background-image:
     linear-gradient(
       to bottom,
@@ -396,6 +393,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
