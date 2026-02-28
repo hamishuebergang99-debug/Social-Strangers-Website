@@ -83,14 +83,6 @@ header {
   text-transform: uppercase;
 }
 
-/* Vertical text only on larger screens */
-.about-us {
-  margin-top: 1.5rem;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  color: var(--text-muted);
-}
-
 /* Mobile-specific crop */
 @media (max-width: 768px) {
   header {
@@ -98,6 +90,14 @@ header {
       linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
       url("Images/d8641ccb-a1f6-436b-88da-1e6d52d4e68f-mobile.jfif");
   }
+}
+
+/* Vertical text only on larger screens */
+.about-us {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
 }
 
 /* ================= NAV ================= */
@@ -391,6 +391,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
