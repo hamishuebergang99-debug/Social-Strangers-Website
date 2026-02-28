@@ -54,7 +54,7 @@ header {
   header {
     background-image:
       linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-      url("Images/hero-mobile.jpeg");
+      url("Images/d8641ccb-a1f6-436b-88da-1e6d52d4e68f-mobile.jfif");
 
     background-position: center top;
   }
@@ -385,6 +385,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
