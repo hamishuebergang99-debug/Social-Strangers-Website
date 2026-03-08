@@ -73,15 +73,23 @@
   </footer>
 
   <script>
+  document.addEventListener("DOMContentLoaded", function() {
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
   const popup = document.getElementById("popup");
-  const closeBtn = document.querySelector(".close");
+  const closeBtn = document.querySelector(".close-btn");
 
-  // Popup
-    closeBtn.onclick = function() {
-      popup.style.display = "none";
-    }
+  // show popup when page loads
+  setTimeout(() => {
+    popup.classList.add("active");
+  }, 300);
+
+  // close popup
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+});
 
   // Hamburger sound (optional)
   const hamburgerSound = new Audio('Beat.mp3');
@@ -121,15 +129,16 @@
   });
 </script>
 
-  <div id="popup">
+  <div id="popup" class="popup-overlay">
   <div class="popup-content">
-    <span class="close">&times;</span>
+    <button class="close-btn">&times;</button>
     <img src="Images/ChatGPT Image Mar 3, 2026 at 06_46_22 PM.png" alt="Popup Image">
   </div>
 </div>
 
 </body>
 </html>
+
 
 
 
