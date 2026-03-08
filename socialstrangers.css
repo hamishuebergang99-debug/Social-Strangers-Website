@@ -323,6 +323,11 @@ body.popup-open {
   background: white;
 }
 
+.close-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* Slight zoom animation */
 @keyframes popupScale {
   from {
@@ -478,6 +483,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
