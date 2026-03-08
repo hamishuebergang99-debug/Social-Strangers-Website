@@ -299,6 +299,10 @@ nav a:hover {
   display: block;
 }
 
+body.popup-open {
+  filter: grayscale(100%);
+}
+
 /* Close button */
 .close-btn {
   position: absolute;
@@ -472,6 +476,7 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
 
 
 
