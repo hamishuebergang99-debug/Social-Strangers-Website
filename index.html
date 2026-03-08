@@ -74,9 +74,17 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", function() {
+    
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
-});
+  const popup = document.getElementById("popup");
+  const closeBtn = document.querySelector(".close-btn");
+
+  popup.classList.add("active");
+
+  closeBtn.addEventListener("click", function() {
+  popup.classList.remove("active");
+  });
 
   // Hamburger sound (optional)
   const hamburgerSound = new Audio('Beat.mp3');
@@ -114,6 +122,7 @@
       }, 1500); // adjust to match sound length
     });
   });
+});
 </script>
 
   <!--
@@ -127,6 +136,7 @@
 
 </body>
 </html>
+
 
 
 
